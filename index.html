@@ -3,9 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data: blob:; connect-src 'none'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' https://*.googletagmanager.com; style-src 'unsafe-inline'; img-src data: blob: https://*.google-analytics.com https://*.googletagmanager.com; connect-src https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <meta name="robots" content="noindex, nofollow">
 <title>墨塗りマスカー</title>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z19J0WPJ1R"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-Z19J0WPJ1R', {
+  allow_google_signals: false,
+  allow_ad_personalization_signals: false
+});
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='4' y='13' width='24' height='7' rx='2' fill='%231a1a1a'/%3E%3C/svg%3E">
 <style>
 /* ============ tokens ============ */
@@ -127,7 +137,7 @@ main{width:100%;max-width:880px;margin:0 auto;padding:16px 16px 40px;flex:1}
 /* ============ home ============ */
 .home-lead{font-size:15px;line-height:1.9;margin-bottom:16px}
 .home-lead b{color:var(--ink)}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:4px}
+.feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-bottom:4px}
 @media (max-width:640px){.feature-grid{grid-template-columns:1fr}}
 .feature{background:var(--bg);border-radius:8px;padding:14px}
 .feature .ft{font-weight:700;color:var(--ink);font-size:13px;margin-bottom:6px;display:flex;align-items:center;gap:7px}
@@ -378,10 +388,6 @@ footer{
       メールアドレス・電話番号などを自動で見つけて塗りつぶし、<b>元と同じ形式のまま</b>保存・コピーできます。
     </p>
     <div class="feature-grid">
-      <div class="feature">
-        <div class="ft"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>送信しない設計</div>
-        <p>入力した内容やファイルをどこかへ送信する機能を、このツールは持っていません。処理はすべて、いま開いているブラウザの中で行われます。</p>
-      </div>
       <div class="feature">
         <div class="ft"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 3h7l4 4v14H7z" stroke-linejoin="round"/><path d="M14 3v4h4" stroke-linejoin="round"/><path d="M10 13h5M10 16h5" stroke-linecap="round"/></svg>Officeファイル対応</div>
         <p>Excel・Word・PowerPointは、書式やレイアウトを保ったまま文字だけを伏字にして書き出せます。ファイルに残る作成者名も消せます。</p>
